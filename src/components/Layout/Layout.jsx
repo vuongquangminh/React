@@ -21,7 +21,7 @@ function Layout({ children, name, link }) {
             alt=""
           />
         </div>
-        <div class="header_input input-group d-flex flex-row-reverse align-items-center">
+        <div className="header_input input-group d-flex flex-row-reverse align-items-center">
           <p className="text-light m-0 text-decoration-underline mx-4">
             Nâng cao
           </p>
@@ -31,7 +31,7 @@ function Layout({ children, name, link }) {
           />
           <input
             type="text"
-            class="form-control rounded-0 "
+            className="form-control rounded-0 "
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
             fdprocessedid="9yw62e"

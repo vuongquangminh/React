@@ -20,8 +20,4 @@ body {
   text-decoration: none;
   padding: 0 80px 0 16px;
 }
-.listCard {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-}
+

@@ -41,7 +41,7 @@ function App() {
 
 
       <Routes>
-        {listPath.map((item, index) => <Route path={item.path} element = {item.element} />)}
+        {listPath.map((item, index) => <Route key={index} path={item.path} element = {item.element} />)}
       </Routes>
 
     </div>
