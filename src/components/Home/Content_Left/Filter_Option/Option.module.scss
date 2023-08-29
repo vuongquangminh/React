@@ -1,0 +1,23 @@
+.my_title {
+    border-bottom: 1px solid;
+    padding: 10px;
+    h5 {
+        font-size: 1.45rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+.wrap_item {
+    display: flex;
+    font-weight: 500;
+    color: #565353;
+    padding-top: 9px;
+    border-top: 1px solid #ccc;
+    padding-bottom: 3px;
+    input {
+        width: 16px;
+    }
+}
+.item {
+    margin-left: 8px;
+}

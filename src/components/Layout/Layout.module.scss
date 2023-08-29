@@ -1,0 +1,138 @@
+.header {
+    a {
+        color: #fff;
+        font-size: 15px;
+        line-height: 36px;
+        min-width: 64px;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0 80px 0 16px;
+      }
+}
+  
+
+.header {
+    background-color: #ad180d;
+    border-radius: 0;
+    border: 0;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  
+  }
+
+.header_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #da2a1c; 
+    padding: 0 20px; 
+}
+.header_bottom .img {
+    width: 67px;
+    img {
+        width: 100%;
+    }
+}
+
+.header_input {
+    width: 477px;
+    height: 43px;
+    input {
+        height: 100%;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        color: black;
+    }
+    p {
+        width: 116px;
+    }
+    position: relative;
+}
+
+.header_icon {
+    background-color: #404f5a;
+    width: 43px ;
+    height: 43px ;
+}
+.header_nav {
+    color: #fff;
+    font-size: 17px;
+    line-height: 115px;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0 10px;
+    display: inline-block;
+    letter-spacing: 1px;
+    min-width: 100px;
+}
+.white {
+    background-color: #ff8076;
+    height: 7.9em;
+    margin:  0;
+}
+.header_nav.action {
+    background-color: #ffc476;
+    color: #404f5a;
+}
+.my_row {
+    padding: 20px;
+    background-color: rgb(173, 24, 13);
+    color: #fff;
+}
+.my_col {
+    border-right: 1px solid rgb(195, 83, 71);
+    li {
+        text-decoration: underline;
+    }
+}
+.my_row2 {
+    padding: 20px;
+    background-color: #7b1b0e;
+    color: #fff;
+    p {
+        margin: 0;
+        padding: 3px 0;
+        font-size: 14px;
+        span:first-child {
+            display: inline-block;
+            margin-right: 25px;
+            text-decoration: underline;
+        }
+    }
+}
+.search {
+    color: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 319px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+    p {
+        margin: 0 6px 6px 0;
+        font-size: 14px;
+        font-weight: 600;
+        width: auto;
+    }
+    >p {
+        margin-top: 8px;
+        text-decoration: underline;
+    }
+}
+.itemKQ {
+    display: flex;
+
+    span {
+        width: auto;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #909090;
+    }
+
+}

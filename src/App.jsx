@@ -1,49 +1,26 @@
-
 import { Link, Routes, Route } from "react-router-dom";
-import "./App.css";
-import Card from "./components/Card/Card";
+import styles from "./App.module.scss";
+import clsx from "clsx";
+
+import Card from "./components/Home/Card/Card";
 import Login from "./components/Login/Login";
 import Forget from "./components/ForgetPass/Forget";
 import Home from "./components/Home/Home";
+import User from "./components/User/User";
+import PrivateRoute from "./components/User/PrivateRouter/PrivateRoute";
 
 function App() {
-  const listPath= [
-  {
-    path: '/login',
-    element: <Login />
-  },
-  {
-    path: '/',
-    element: <Login />
-  },
-  {
-    path: '/Home',
-    element: <Home />
-  },
-  {
-    path: '/forgetPassword',
-    element: <Forget />
-  },
-
-]
   return (
-    <div className="App">
-      {/* <div className="header" role="alert">
-        <Link to='/login'>Đăng nhập</Link>
-        <Link to= '/home'>Home</Link>
-      </div> */}
-
-      {/* <button className="btn btn-danger">Hello</button>
-
-       */}
-
-      {/* Bên App chỉ để định tuyến các trang thôi đúng k */}
-
-
+    <div className={clsx(styles.App)}>
       <Routes>
-        {listPath.map((item, index) => <Route key={index} path={item.path} element = {item.element} />)}
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/forgetPassword" element={<Forget />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/user" element={<User />} />
+        </Route>
       </Routes>
-
     </div>
   );
 }

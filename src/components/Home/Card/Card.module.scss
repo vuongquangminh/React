@@ -1,0 +1,59 @@
+.listCard .card {
+    padding: 0;
+    margin: 9px;
+}
+
+.card_img {
+    height: 256px;
+}
+.card_img img {
+    height: 100%;
+    object-fit: cover;
+}
+.card_name {
+    font-size: 18px;
+    font-weight: 700;
+}
+.w_30 {
+    width: 30% !important;
+}
+.right {
+    width: 70px;
+    img {
+        width: 100%;
+    }
+}
+.title {
+    font-size: 15px;
+}
+.sub_Check {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.sub_left {
+    display: flex;
+    align-items: center;
+    color: #212121;
+    p{
+        margin: 0 5px;
+        
+    }
+    svg {
+        color: rgb(208, 213, 214);
+    }
+}
+.content {
+    padding: 16px;
+}
+.sub_right {
+    width: 50px;
+    span {
+        display: block;
+        height: 50px;
+        background-color: #e91e63;
+        line-height: 50px;
+        border-radius: 61px;
+        margin: 0 !important;
+    }
+}

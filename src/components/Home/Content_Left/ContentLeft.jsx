@@ -1,70 +1,68 @@
-import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Tree } from "antd";
+import { memo } from "react";
+import Icon from "@mdi/react";
+import { mdiHelpCircle, } from "@mdi/js";
 
-function ContentLeft() {
-    const treeData = [
-        {
-          title: "Loài đặc hữu",
-          key: "loaidachuu",
-          children: [
-            {
-              title: " Loài đặc hữu ",
-              key: "loaidachuu_child_1",
-            },
-            {
-              title: " Không đặc hữu ",
-              key: "loaidachuu_child_2",
-            },
-          ],
-        },
-      ];
-    return ( 
-        <>
-        <div className="col-3 left">
-              <div className="title">
-                Loại <FontAwesomeIcon icon={faCircleQuestion} />
-              </div>
-              <div className="check_radio">
-                <div className="form-check radio_item">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                    defaultChecked
-                  />
-                  <label
-                    className="form-check-label"
-                    htmlFor="flexRadioDefault1"
-                  >
-                    Loài
-                  </label>
-                </div>
-                <div className="form-check radio_item">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault2"
-                  />
-                  <label
-                    className="form-check-label"
-                    htmlFor="flexRadioDefault2"
-                  >
-                    Văn bản tài liệu
-                  </label>
-                </div>
-              </div>
-              <div className="title">
-                Bộ lọc <FontAwesomeIcon icon={faCircleQuestion} />
-              </div>
-              <div className="option">
-                <Tree checkable treeData={treeData} />
-              </div>
-            </div>
-        </>
-     );
+import Option from "./Filter_Option/Option";
+import styles from "./ContentLeft.module.scss";
+import clsx from "clsx";
+
+
+
+function ContentLeft({dataForOption, check_option}) {
+
+  return (
+    <>
+      <div className={clsx("col-3", styles.left)}>
+        <div className={styles.title}>
+          <h6>Loại</h6>
+
+          <Icon path={mdiHelpCircle} size={0.7} />
+        </div>
+        <div className={clsx(styles.check_radio)}>
+          <div className={clsx("form-check", styles.radio_item)}>
+            <input
+              className={clsx("form-check-input")}
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+              defaultChecked
+            />
+            <label
+              className={clsx("form-check-label")}
+              htmlFor="flexRadioDefault1"
+            >
+              Loài
+            </label>
+          </div>
+          <div className={clsx("form-check", styles.radio_item)}>
+            <input
+              className={clsx("form-check-input")}
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+            />
+            <label
+              className={clsx("form-check-label")}
+              htmlFor="flexRadioDefault2"
+            >
+              Văn bản tài liệu
+            </label>
+          </div>
+        </div>
+        <div className={clsx(styles.title)}>
+          <h6>Bộ lọc</h6>
+          <Icon path={mdiHelpCircle} size={0.7} />
+        </div>
+        <div className={clsx(styles.Fill_Option)}>
+          {
+            dataForOption.map((item, index) => 
+              <Option option={item.option} key={index} check_option={check_option}/>
+            )
+          }
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default ContentLeft;
+export default memo(ContentLeft);
